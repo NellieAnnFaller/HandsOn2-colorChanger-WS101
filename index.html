@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        html {
+            height: 100%;
+        }
+
+
+        body {
+            background-image: linear-gradient(#205072, black);
+        }
+
+        #all {
+            background-image: linear-gradient(black,#205072);
+            width: 400px;
+            height: 400px;
+            margin: 0% auto;
+            border: 1px solid;
+            border-color: transparent;
+            border-radius: 5px;
+            box-shadow: 0 5px 9px  white;
+        }
+
+        #theBox {
+            height: 200px;
+            width: 200px;
+            background-color: green;
+            margin: 0% auto;
+            margin-top: 50px;
+            border: 3px solid;
+            border-color: #1b8fac;
+            border-radius: 20%;
+            transition: background-color 0.5s ease-in-out;
+
+        }
+
+        #bot {
+            margin: 0% auto;
+            height: 50px;
+            width: 150px;
+            background-color: transparent;
+            margin-top: 30px;
+            border-radius: 20px;
+        }
+
+        #button {
+            background-image: linear-gradient(#205072, #329d9c);
+            border: 3px solid;
+            border-color: #1b8fac;
+            border-radius: 20px;
+            height: 100%;
+            width: 100%;
+        }
+
+
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center; color: white;">JavaScript colorChanger() Hands-On</h1>
+   <div id="all">
+       <div id="theBox">
+         </div>
+       <div id="bot">
+          <button id="button" onclick="changeColor()" style="color: white; font-size: 20px;">Click Me</button>
+       </div>
+    </div>
+
+
+<script>
+
+    const theBox = document.getElementById("theBox");
+    let button = document.getElementById("button");
+
+    button.addEventListener('click', changingColor);
+
+
+    function changeColor() {
+        if (theBox.style.backgroundColor === 'green') {
+            theBox.style.backgroundColor = 'blue';
+        } else {
+            theBox.style.backgroundColor = 'green';
+        }
+    }
+
+
+
+
+
+</script>
+
+
+
+
+
+</body>
+</html>
